@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="titleArea">
+        <h3>Driving Log</h3>
+    </div>
+
+    <form name="submit-to-google-sheet">
+        <label>Date of Drive</label>
+        <input name="Date" placeholder="6/23/2024"><br>
+
+        <label>Day Minutes</label>
+        <input type="number" name="Day Minutes" placeholder="0"><br>
+
+        <label>Night Minutes</label>
+        <input type="number" name="Night Minutes" placeholder="0"><br>
+
+        <button type="submit">Submit Time</button>
+
+        <span id="msg"></span>
+    </form>
+    
+    <script src="main.js"></script>
+</body>
+</html>

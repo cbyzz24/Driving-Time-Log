@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, green, yellow);
+}
+
+.titleArea h3{
+    font-size: 2rem;
+    color: blue;
+}
+
+form{
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+form label{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form input{
+    font-size: 1.25rem;
+    width: 175px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+form button{
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    border-radius: 25px;
+    background-color: hsl(203, 92%, 45%);
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: hsl(203, 92%, 65%);
+}
+
+form span{
+    margin-top: 15px;
+    color: blue;
+}
