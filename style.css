@@ -1,6 +1,7 @@
 *{
     margin: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -43,19 +44,24 @@ form label{
 form input{
     font-size: 1.25rem;
     width: 160px;
-    padding-right: 3px;
     text-align: right;
     border-radius: 10px;
     border: none;
     box-shadow: inset 2px 2px 5px hsl(0, 0%, 20%);
 }
 
+.date{
+    padding-right: 3px;
+}
+
 .dayMins{
-    width: 75px;
+    width: 70px;
+    padding-right: 6px;
 }
 
 .nightMins{
-    width: 75px;
+    width: 70px;
+    padding-right: 6px;
 }
 
 form button{
