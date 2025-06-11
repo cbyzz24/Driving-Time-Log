@@ -8,7 +8,7 @@ form.addEventListener('submit', e => {
 e.preventDefault()
 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-        msg.innerHTML = "Your Time Has Been Submitted!"
+        msg.innerHTML = "Time Submitted!"
         setTimeout(function(){
             msg.innerHTML = ""
         },3000)

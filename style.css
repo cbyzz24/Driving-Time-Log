@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -13,37 +14,57 @@ body{
 }
 
 .titleArea h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2rem;
     color: blue;
 }
 
 form{
     margin-top: 15px;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 25px;
+    padding: 25px 45px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
+    align-items: center;
+    background-color: rgba(225, 225, 225, 0.1, rgba(225, 225, 225, 0.0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;  
+    border: 1px solid white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.80);  
 }
 
 form label{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    color: darkslategray;
+    margin-bottom: 2px;
 }
 
 form input{
     font-size: 1.25rem;
-    width: 175px;
-    text-align: center;
+    width: 160px;
+    padding-right: 3px;
+    text-align: right;
     border-radius: 10px;
+    border: none;
+    box-shadow: inset 2px 2px 5px hsl(0, 0%, 20%);
+}
+
+.dayMins{
+    width: 75px;
+}
+
+.nightMins{
+    width: 75px;
 }
 
 form button{
+    margin-top: 8px;
     font-size: 1.5rem;
-    padding: 10px 0px;
+    padding: 10px 25px;
+    border: none;
     border-radius: 25px;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 20%);
     background-color: hsl(203, 92%, 45%);
     color: white;
     cursor: pointer;
@@ -55,5 +76,7 @@ form button:hover{
 
 form span{
     margin-top: 15px;
-    color: blue;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: hsl(300, 100%, 25%);
 }
