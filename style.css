@@ -41,6 +41,16 @@ form label{
     margin-bottom: 2px;
 }
 
+.resultsDisplay{
+    width: 170px;
+    margin-top: 10px;
+    font-size: 1.15rem;
+    /* text-align: center; */
+    /* background-color: beige; */
+    border-radius: 12px;
+    padding: 10px 10px;
+}
+
 form input{
     font-size: 1.25rem;
     width: 160px;

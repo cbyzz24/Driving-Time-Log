@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
     <title>Driving Log</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,6 +11,10 @@
 
     <div class="titleArea">
         <h3>Driving Log</h3>
+    </div>
+
+    <div class="resultsDisplay">
+        <div class="remainHours" id="remainHours"></div>
     </div>
 
     <form name="submit-to-google-sheet">
