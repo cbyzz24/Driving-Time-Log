@@ -24,11 +24,11 @@ if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
     })
     .catch(error => console.error('Error!', error.message))
     // remainHoursEl.innerHTML = "Updating....."
-    fetch(webAddr)
-    .then(result=>result.text())
-    .then(function(csvtext){
-        return csv().fromString(csvtext)
-    })
+    // fetch(webAddr)
+    // .then(result=>result.text())
+    // .then(function(csvtext){
+    //     return csv().fromString(csvtext)
+    // })
     // .then(function(csv){
     //     remainHoursEl.innerHTML = "<h4>Remaining Hours</h4>"
     //     // remainHoursEl.innerHTML = "<code>" + JSON.stringify(csv) + "</code>"
@@ -44,9 +44,7 @@ if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
     }
 })
 
-
-
-form.addEventListener("submit", (e) => {
+function delayUpdate(){
     fetch(webAddr)
     .then(result=>result.text())
     .then(function(csvtext){
@@ -62,4 +60,12 @@ form.addEventListener("submit", (e) => {
                 // remainHoursEl.innerHTML += "<p>" + row.hours + "</p>"
             })
         })
-})
+}
+
+setInterval(delayUpdate, 2000)
+
+delayUpdate()
+
+// form.addEventListener("submit", (e) => {
+    
+// })

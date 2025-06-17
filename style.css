@@ -51,6 +51,10 @@ form label{
     padding: 10px 10px;
 }
 
+.resultsDisplay h4{
+    text-decoration: underline;
+}
+
 form input{
     font-size: 1.25rem;
     width: 160px;
