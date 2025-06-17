@@ -8,10 +8,11 @@ const dayMinsEl = document.getElementById("dayMins")
 const nightMinsEl = document.getElementById("nightMins")
 const webAddr = 'https://docs.google.com/spreadsheets/d/1_ipQPy9GTio6pY_RCXLzWjBz8BDETsjRwu8-E2d6OOM/export?format=csv'
 const remainHoursEl = document.getElementById("remainHours")
-
+const subBtn = document.getElementById("subBtn")
 
 form.addEventListener('submit', e => {
 e.preventDefault()
+subBtn.style.visibility = "hidden"
 if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
     msg.innerHTML = "Updating....."
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -21,6 +22,11 @@ if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
             msg.innerHTML = ""
         },3000)
         form.reset()
+        function showBtn(){
+            subBtn.style.visibility = "visible"
+        }
+        // setTimeout(showBtn, 5000)
+        showBtn()
     })
     .catch(error => console.error('Error!', error.message))
     // remainHoursEl.innerHTML = "Updating....."
