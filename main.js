@@ -12,8 +12,8 @@ const subBtn = document.getElementById("subBtn")
 
 form.addEventListener('submit', e => {
 e.preventDefault()
-subBtn.style.visibility = "hidden"
 if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
+    subBtn.style.display = "none"
     msg.innerHTML = "Updating....."
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
@@ -22,29 +22,9 @@ if((dateEl.value != "") && (dayMinsEl.value != "" || nightMinsEl.value != "")){
             msg.innerHTML = ""
         },3000)
         form.reset()
-        function showBtn(){
-            subBtn.style.visibility = "visible"
-        }
-        // setTimeout(showBtn, 5000)
-        showBtn()
+        subBtn.style.display = "inline"
     })
     .catch(error => console.error('Error!', error.message))
-    // remainHoursEl.innerHTML = "Updating....."
-    // fetch(webAddr)
-    // .then(result=>result.text())
-    // .then(function(csvtext){
-    //     return csv().fromString(csvtext)
-    // })
-    // .then(function(csv){
-    //     remainHoursEl.innerHTML = "<h4>Remaining Hours</h4>"
-    //     // remainHoursEl.innerHTML = "<code>" + JSON.stringify(csv) + "</code>"
-    //     csv.forEach(function(row){
-    //         // remainHoursEl.innerHTML += "<p>" + row.type + "</p>"
-    //         remainHoursEl.innerHTML += row.type + ": "
-    //         remainHoursEl.innerHTML += row.hours +"<br>"
-    //         // remainHoursEl.innerHTML += "<p>" + row.hours + "</p>"
-    //     })
-    // })
 } else{
     alert("Please enter Date and Day Minutes or Night Minutes")
     }
@@ -72,6 +52,3 @@ setInterval(delayUpdate, 2000)
 
 delayUpdate()
 
-// form.addEventListener("submit", (e) => {
-    
-// })
